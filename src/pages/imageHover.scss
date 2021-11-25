@@ -1,0 +1,50 @@
+.container {
+    position: relative;
+    width: 50%;
+    max-width: 360px;
+    margin-right: 15px;
+    padding: 0px;
+    @media screen and (max-width: 900px) {
+      width: 100%;
+      margin-right: 0px;
+      margin-left: 0px;
+  }
+}
+  
+  /* Make the image to responsive */
+  .image {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* The overlay effect (full height and width) - lays on top of the container and over the image */
+  .overlay {
+    position: absolute;
+    bottom: 0 ;
+    left: 0 ;
+    right: 0;
+    background-color: #ff8120d6;
+    overflow: hidden;
+    width: 360px;
+    height: 260px;
+    transform: scale(0);
+    transition: .3s ease;
+    margin-bottom: 15px;
+    padding: 30px;
+  }
+  
+  /* When you mouse over the container, the overlay text will "zoom" in display */
+  .container:hover .overlay {
+    transform: scale(1);
+  }
+  
+  /* Some text inside the overlay, which is positioned in the middle vertically and horizontally */
+  .text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    // text-align: center;
+  }

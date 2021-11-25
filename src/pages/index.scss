@@ -1,0 +1,334 @@
+html {
+    height: 100%;
+    display: list-item !important;
+    #___gatsby{
+        height: 100%;;
+    }
+    #gatsby-focus-wrapper{
+        height: 100%;;
+    }
+    body {
+        height: 100%;
+    }
+}
+
+.socialContent {
+    display: flex;
+    margin-bottom: 15px;
+    justify-content: center;
+    div {
+        background-color: rgb(255, 129, 32);
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 60px;
+        height: 60px;
+        margin-right: 10px;
+        svg {
+            color: #ffffff;
+            width: 30px;
+            height: 30px;
+        }
+    }
+}
+
+.contentTaks {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    padding: 100px;
+    @media screen and (max-width: 900px) {
+        h2 {
+            font-size: 25px !important;
+        }
+        padding: 0px;
+    }
+}
+
+.headerContent {
+    display: flex;
+    width: 100%; 
+    justify-content: space-around; 
+    padding: 20px;
+    @media screen and (max-width: 900px) {
+        flex-direction: row;
+        align-items: center;
+        img {
+            width:  120px;
+        }
+    }
+}
+
+.content-1 {
+    height: 650px !important;
+    display: flex; 
+    width: 100%; 
+    flex-direction: column;
+    height: 100%; 
+    align-items: center; 
+    justify-content: center;
+    h3 {
+        font-size: 68px;
+        font-weight: 60px
+    }
+    .serviceInfo {
+        justify-content: center;
+        display: flex;
+        border: 1px solid #FF8120; 
+        width: 256px; 
+        height: 72px;
+        color: #fff;
+        font-weight: 700;
+        font-size: 18px;
+        text-transform: uppercase;
+        padding: 17px 0px;
+        margin-left: 120px;
+        cursor: pointer;
+    }
+    .selectedService {
+        background-color: #FF8120;
+        justify-content: center;
+        display: flex;
+        border: 1px solid #FF8120; 
+        width: 256px; 
+        height: 72px;
+        color: #fff;
+        font-weight: 700;
+        font-size: 18px;
+        text-transform: uppercase;
+        padding: 17px 0px;
+        margin-left: 120px;
+        cursor: pointer;
+    }
+    @media screen and (max-width: 900px) {
+        min-height: 650px;
+        h3 {
+            font-size: 30px !important;
+            text-align: center;
+        }
+        .serviceInfo {
+            height: 44px;
+            font-size: 15px;
+        }
+        .selectedService {
+            height: 44px;
+            font-size: 15px;
+        }
+    }
+}
+
+.contentForm {
+    display: flex; 
+    justify-content: center; 
+    width: 100%; 
+    background-color: #ff8120d6;
+    padding: 50px;
+    margin-bottom: 50px;
+    @media screen and (max-width: 900px) {
+        padding: 0px;
+        form {
+            border-radius: 0px !important;
+        }
+    }
+}
+
+.contentAvaliation {
+    background-color: rgba(0, 0, 0, 0.79);
+    width: 100%; 
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 15px;
+    color: whitesmoke;
+    flex-wrap: wrap;
+    .cardGroup {
+        display: flex; 
+        justify-content: space-around; 
+        align-items: center; 
+        width: 100%;
+    }
+    .cardAvaliation {
+        background: hsla(0,0%,100%,.129);
+        border: 2px solid #FF8120;
+        width: 425px;
+        height: 250px;
+        padding: 15px;
+        margin-bottom: 30px;
+    }
+
+    @media screen and (max-width: 900px) {
+        .cardGroup {
+            flex-direction: column;
+        }
+        .cardAvaliation {
+            width: 100%;
+        }
+      }  
+}
+
+.serviceContent {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center;
+    .serviceInfo {
+        justify-content: center;
+        display: flex;
+        border: 1px solid #FF8120; 
+        width: 256px; 
+        height: 72px;
+        color: #fff;
+        font-weight: 700;
+        font-size: 18px;
+        text-transform: uppercase;
+        padding: 17px 0px;
+        margin-left: 120px;
+        cursor: pointer;
+    }
+    .selectedService {
+        background-color: #FF8120;
+        justify-content: center;
+        display: flex;
+        border: 1px solid #FF8120; 
+        width: 256px; 
+        height: 72px;
+        color: #fff;
+        font-weight: 700;
+        font-size: 18px;
+        text-transform: uppercase;
+        padding: 17px 0px;
+        margin-left: 120px;
+        cursor: pointer;
+    }
+    @media screen and (max-width: 900px) {
+        .serviceInfo {
+            height: 44px;
+            font-size: 15px;
+        }
+        .selectedService {
+            height: 44px;
+            font-size: 15px;
+        }
+      }  
+
+}
+  // Antigo
+.content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    .mainContent {
+        height: 100%;
+        min-height: 1700px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #ffffff;
+        h3 {
+            font-size: 68px;
+        }
+        form {
+            // background-color: #ff812000;
+            background-color: whitesmoke;
+            box-shadow: none;
+            min-width: 60%;
+            input {
+                border-radius: 20px;
+            }
+        }
+        // padding: 20px;
+        // margin-top: 80px;
+        // display: flex;
+        // flex-direction: column;
+        .subtitle {
+            color: #9E9E9E;
+        }
+        .mainText {
+            font-size: 40px;
+            font-weight: bold;
+        }
+    }
+}
+
+.footer {
+    display: flex;
+    background-color: #222;
+    color: whitesmoke;
+    bottom: 0;
+    position: relative;
+    width: 100%;
+    .footerGroup {
+        @media screen and (max-width: 900px) {
+            flex-direction: column;
+            align-items: flex-start !important;
+          }
+    }
+    .infoGroup {
+        @media screen and (max-width: 900px) {
+            width: 44%;
+            margin-bottom: 15px;
+            margin-top: 15px;
+          }  
+    }
+    .footerLogo {
+        display: flex;
+        flex-direction: column;
+        img {
+            width: 200px;
+        }
+    }
+    .footerTitle {
+        font-weight: bold;
+    }
+}
+
+.buttonStyle {
+    background-color: whitesmoke;
+    width: 150px; 
+    height: 40px; 
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+     p {
+        text-decoration: none; 
+        color: #444444
+     }
+     a {
+        text-decoration: none; 
+        color: #444444
+     }
+     @media screen and (max-width: 900px) {
+         max-width: 300px;
+        a {
+            text-align: center; 
+         }
+      }
+}
+
+.budgetContent {
+    width: 100%;
+    height: 200px; 
+    background-color: #FF8120; 
+    display: flex; 
+    padding: 70px 0px; 
+    justify-content: center;
+    
+    h2 {
+        font-size: 20px !important;
+
+    }
+    .budgetGroup {
+        display: flex;
+        flex-direction: column; 
+        margin-right: 30px;
+    }
+
+    @media screen and (max-width: 900px) {
+        flex-direction: column;
+        padding: 60px 15px;
+        height: 290px;
+     }
+}

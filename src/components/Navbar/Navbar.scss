@@ -1,0 +1,36 @@
+.navbar {
+    color: #939393;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #245E70;
+    height: 40px;
+    justify-content: center;
+    .logo {
+        color: white;
+        width: 100px;
+        height: 40px;
+    }
+    svg { 
+        display: none;
+    }
+    @media screen and (max-width: 900px) {
+        width: 100%;
+        .logo {
+            width: 90%;
+        }
+        svg {
+            display: flex;
+        }
+    }
+    a {
+        text-decoration: none;
+        color: whitesmoke;
+        padding: 0px;
+        padding-left: 10px;
+        padding-right: 10px;
+        @media screen and (max-width: 900px) {
+            display: none;
+        }
+    }
+}
