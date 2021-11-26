@@ -64,10 +64,14 @@ html {
     height: 650px !important;
     display: flex; 
     width: 100%; 
-    flex-direction: column;
+    // flex-direction: column;
     height: 100%; 
     align-items: center; 
     justify-content: center;
+    .serviceImages {
+        display: flex; 
+        margin-left: 60px; 
+    }
     h3 {
         font-size: 68px;
         font-weight: 60px
@@ -103,6 +107,14 @@ html {
     }
     @media screen and (max-width: 900px) {
         min-height: 650px;
+        flex-direction: column;
+        .serviceImages {
+            flex-direction: column;
+            margin-left: 0px;
+            img {
+                max-width: 300px;
+            }
+        }
         h3 {
             font-size: 30px !important;
             text-align: center;

@@ -48,17 +48,17 @@ class HomePage extends React.Component {
       }
   }
   async componentDidMount() {
-    console.log(siteData)
-      const data = await siteData.getIndexInfo()
-      const home = await siteData.getHomeInfo()
+    const data = await siteData.getIndexInfo()
+    const home = await siteData.getHomeInfo()
+    console.log(home)
       if (this.state.serviceType === 'resindecial') console.log('true')
       await this.setState({ 
-          logo: `http://localhost:8080${data[0].Header.Logo.url}`,
+          logo: `https://strapi-cms-speddylar.herokuapp.com${data[0].Header.Logo.url}`,
           contact: data[0].Header.Contact,
           itemsMenu: data[0].Header.Menu,
           title: home[0].Home[0].Title,
           subTitle: home[0].Home[0].SubTitle,
-          teste: home[0].Home[0].Teste
+          // teste: home[0].Home[0].Teste
       })
   }
   setSetvice = async (typeName, name, description, imageService, link) => {
@@ -176,7 +176,7 @@ class HomePage extends React.Component {
          <div className="mainContent">
            <div style={{ width: '100%', backgroundColor: '#FF8120' }}>
              <div style={{ display: 'flex', justifyContent: 'space-between', padding: '15px', color: 'whitesmoke' }}>
-               <Link to="https://www.facebook.com/speedylarmudancas/"><FaFacebookSquare style={{ color: 'whitesmoke', height: '24px' }}></FaFacebookSquare></Link>
+               <Link href="https://www.facebook.com/speedylarmudancas/" passHref={true}><FaFacebookSquare style={{ color: 'whitesmoke', height: '24px' }}></FaFacebookSquare></Link>
                <div>comercial@speedylarmudancas.com.br</div>
              </div>
            </div>
@@ -186,7 +186,7 @@ class HomePage extends React.Component {
                <FaWhatsapp style={{ width: '35px', height: '35px', color: '#FF8120', lineHeight: '48px', marginRight: '15px' }}></FaWhatsapp>
                <div style={{ display: 'flex', flexDirection: 'column'}}>
                  Fale Conosco
-                 <Link to="https://api.whatsapp.com/send?phone=551139897408&text=Ol%C3%A1,%20quero%20saber%20mais%20sobre%20os%20servi%C3%A7os%20da%20Speedy%20Lar%20Mudan%C3%A7as" style={{ color: '#245E70', textDecoration: 'none'}}>{ this.state.contact }</Link>
+                 <Link href="https://api.whatsapp.com/send?phone=551139897408&text=Ol%C3%A1,%20quero%20saber%20mais%20sobre%20os%20servi%C3%A7os%20da%20Speedy%20Lar%20Mudan%C3%A7as" passHref={true} style={{ color: '#245E70', textDecoration: 'none'}}>{ this.state.contact }</Link>
                </div>
              </div>
            </div>
@@ -199,7 +199,7 @@ class HomePage extends React.Component {
              </div>
              <div style={{ zIndex: '2', position: 'absolute'}}>
                <h3 style={{ fontWeight: '60px'}}>{this.state.title}</h3>
-               <div style={{ fontSize: '22px', textAlign: 'center' }}>{this.state.teste}</div>
+               <div style={{ fontSize: '22px', textAlign: 'center' }}>{this.state.subTitle}</div>
                <Form style={{ backgroundColor: 'transparent' }}>
                <Row className="g-2">
                  <Col md>
@@ -235,14 +235,14 @@ class HomePage extends React.Component {
            </div>
            {/* Serviços da Pagina */}
            <div  className="content-1" style={{ backgroundColor: 'rgba(0, 0, 0, 0.79)'}}>
-             <div style={{ borderRight:' 3px solid #FF8120', marginRight: '30%' }}>
+             <div style={{ borderRight:' 3px solid #FF8120' }}>
                <div role="table" onClick={() => this.setSetvice('resindecial', 'MUDANÇA RESIDENCIAL', 'A Speedy Lar Mudanças oferece materiais de embalagens, profissionais treinados e segurança para sua mudança residencial.', ResidencialImage, '/services/residencial' ) } className={this.state.serviceInfo.type === 'resindecial' ? "selectedService" : "serviceInfo"}><a>Mudança Residencial</a></div>
                <div role="table" onClick={() => this.setSetvice('comercial', 'MUDANÇA COMERCIAL', 'Oferecemos assistência com segurança e suporte de acordo com a necessidade de cada empresa para sua Mudança Comercial.', ComercialImage, '/services/comercial') } className={this.state.serviceInfo.type === 'comercial' ? "selectedService" : "serviceInfo"}><a>Mudança Comercial</a></div>
                <div role="table" onClick={() => this.setSetvice('guarda', 'GUARDA MÓVEIS', 'Dispomos de guarda-móveis com box de vários tamanhos e amplos espaços para armazenagem para diversos objetos.', GuardaMoveislImage, '/services/guardamoveis') } className={this.state.serviceInfo.type === 'guarda' ? "selectedService" : "serviceInfo"}><a>Guarda Moveis</a></div>
                <div role="table" onClick={() => this.setSetvice('icamento', 'IÇAMENTO', 'A Speedy Lar Mudanças dispõe de profissionais treinados para as operações no Serviço de Içamento de Móveis e Objetos.', IcamentoImage, '/services/service-icamento') } className={this.state.serviceInfo.type === 'icamento' ? "selectedService" : "serviceInfo"}><a>Içamento</a></div>
              </div>
-             <div style={{ display: 'flex', marginLeft: '60px' }}>
-               <div style={{ backgroundColor: 'gainsboro', width: '300px', height: '215px', marginRight: '100px'}}><img src={ this.state.serviceInfo.image }></img></div>
+             <div className='serviceImages'>
+               <div style={{ display: 'flex', justifyContent: 'center', marginRight: '20px'}}><img src={ this.state.serviceInfo.image }></img></div>
                <div>
                  <div style={{ fontWeight: '600', color: '#FF8120', fontSize: '24px', textTransform: 'uppercase' }}>{ this.state.serviceInfo.name }</div>
                  <div style={{ color: '#fff', fontSize: '16px', width: '60%', marginBottom: '40px' }}>{ this.state.serviceInfo.description }</div>
