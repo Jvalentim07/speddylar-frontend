@@ -1,8 +1,5 @@
 import * as React from "react"
 import LayoutPage from "../../components/layoutPage"
-import Form from 'react-bootstrap/Form'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
 
 import BackgroundIcamento from '../../images/backgroundIcamento.jpg'
 import ResidencialImage from '../../images/residencialImage.jpg'
@@ -10,6 +7,7 @@ import ComercialImage from '../../images/comercialImage.jpg'
 import GuardaMoveislImage from '../../images/guardamoveisImage.jpg'
 import PackingImage from '../../images/embalagemImage.jpg'
 import MovingImage from '../../images/movingImage.jpg'
+import IcamentoImage from '../../images/icamentoImage.jpg'
 import { Link } from "gatsby"
 
 import services from '../../api/services'
@@ -32,42 +30,10 @@ class Icamento extends React.Component {
             title={this.state.title}
             img={ BackgroundIcamento }
             pagination={ 'Home > Serviços > Içamento' }
+            textTitle="Utilize nosso serviço de içamento"
+            text="Utilizamos máquinas e equipamentos modernos e atualizados; guindaste para içar com segurança e rapidez. Profissionais altamente treinados para as operações de içamento de móveis e objetos de maneira adequadas."
+            contentImage={ IcamentoImage }
             >
-                <div style={{ display: 'flex', alignItems: "center", flexDirection: "column" }}>
-                    <div>
-                        <div>
-                            <h2 style={{marginBottom: "36px", textAlign: "center" }}>SERVIÇO DE IÇAMENTO</h2>
-                            <div style={{ maxWidth: "710px", marginBottom: "15px", textAlign: "center" }}>Utilizamos máquinas e equipamentos modernos e atualizados; guindaste para içar com segurança e rapidez. Profissionais altamente treinados para as operações de içamento de móveis e objetos de maneira adequadas.</div>
-                        </div>
-                    </div>
-                    <div className="contentForm">
-                        <Form style={{ maxWidth: "550px",  borderRadius: '25px'}} method="POST">
-                            <h2>FALE CONOSCO</h2>
-                            <Row className="g-2">
-                                <Col md>
-                                    <Form.Label>Nome</Form.Label>
-                                    <Form.Control id="name" type="text" placeholder="Insira seu nome" />
-                                </Col>
-                                <Col md>
-                                    <Form.Label>Email</Form.Label>
-                                    <Form.Control id="email" type="email" placeholder="Insira seu email" />
-                                </Col>
-                                <Form.Label>Telefone</Form.Label>
-                                <Form.Control id="phone" type="text" placeholder="Insira seu Telefone" />
-                                <Form.Control
-                                    id="description"
-                                    as="textarea"
-                                    name="Descricao"
-                                    placeholder="Leave a comment here"
-                                    style={{ height: '100px' }}
-                                />
-                            </Row>
-                            <div className="buttonStyle" style={{ backgroundColor: '#212529', color: 'whitesmoke', marginTop: '15px' }} role = "button" tabIndex={0}>
-                                Submit
-                            </div>
-                        </Form>
-                    </div>
-                </div>
                 <div style={{ display: "flex", flexDirection: "column", alignItems: 'center'}}>
                     <div style={{ display: "flex", flexWrap: 'wrap', justifyContent: 'center'}}>
                         <div className="container">

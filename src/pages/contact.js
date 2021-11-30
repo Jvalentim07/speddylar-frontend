@@ -2,7 +2,8 @@ import * as React from "react"
 import LayoutPage from "../components/layoutPage"
 
 import Form from 'react-bootstrap/Form'
-import ContactImage from '../images/budget.jpg'
+import ContactBackground from '../images/budget.jpg'
+import ContactImage from '../images/contato.png'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import api from '../api/api'
@@ -48,8 +49,11 @@ class Contact extends React.Component {
             <LayoutPage 
             title="CONTATO" 
             subtitle="PROFISSIONAIS QUALIFICADOS, SEGURANÇA NO TRANSPORTE E ZELO EM SUA MUDANÇA."
-            img={ ContactImage }
+            img={ ContactBackground }
             pagination={ 'Home > Contato' }
+            textTitle="Sobre nossa empresa"
+            text="A Speedy Lar Mudança e Transporte Ltda atua na área de transporte de mudanças e guarda móveis sempre adequando às tendências do mercado, oferecendo a você segurança, conforto e qualidade, exigindo dos profissionais, responsabilidade cuidado e compromisso em suas operações. Mais que isso transportamos bens conquistado e para isso promovemos organização e proteção dos mesmo"
+            contentImage={ ContactImage }
             >
                 <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '50px'}}>
                     <div className="contactPage">

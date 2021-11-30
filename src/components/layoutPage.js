@@ -5,11 +5,12 @@ import './layout.scss'
 
 import NavBar from '../components/Navbar/Navbar'
 import Logo from '../images/logo.png'
+import ResidencialImage from '../images/speedyImage.jpg'
 // import Form from 'react-bootstrap/Form'
 // import Row from 'react-bootstrap/Row'
 // import Col from 'react-bootstrap/Col'
 
-import { FaPhoneAlt, FaPaperPlane, FaInstagram, FaFacebookSquare, FaWhatsapp } from "react-icons/fa";
+import { FaPhoneAlt, FaPaperPlane, FaInstagram, FaFacebookSquare, FaLock, FaAngleDoubleRight, FaFlag } from "react-icons/fa";
 
 // import { Link } from "gatsby"
 
@@ -22,20 +23,20 @@ const LayoutPage = (prop) => {
           <div>comercial@speedylarmudancas.com.br</div>
         </div>
       </div>
-      <div className="headerContent">
-        <div className="logo"><img width="300px" src={Logo} alt='logo' /></div>
-        <div style={{ display: 'flex', alignItems: 'center' }}>
-          <FaWhatsapp style={{ width: '35px', height: '35px', color: '#FF8120', lineHeight: '48px', marginRight: '15px' }}></FaWhatsapp>
-          <div style={{ display: 'flex', flexDirection: 'column'}}>
-            Fale Conosco
-            <Link to="https://api.whatsapp.com/send?phone=551139897408&text=Ol%C3%A1,%20quero%20saber%20mais%20sobre%20os%20servi%C3%A7os%20da%20Speedy%20Lar%20Mudan%C3%A7as" style={{ color: '#245E70', textDecoration: 'none'}}>(11) 3989-7408</Link>
-          </div>
-        </div>
-      </div>
+      <NavBar />
       <div style={{ width: "100%", height: "100%" }}>
-        <NavBar />
-        <div style={{ height: '75px', display: 'flex', justifyContent: 'center', alignItems: 'center', fontSize: '20px',marginBottom: '15px' }}>{ prop.pagination }</div>
-        <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+        <div style={{ display: 'flex', justifyContent: 'center'}}>
+          <img alt="Fundo" style={{ zIndex: '1', width: '70%', height: '350px'}} src={ prop.img }/>
+          <div className="background">
+              <div style={{ display: 'flex', height: '100%', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
+                <div style={{ fontSize: '17px', fontWeight: 'bold', color: '#FF8120'}}>SERVIÇOS DE MUDANÇAS E TRANSPORTES</div>
+                <h2 style={{ color: 'whitesmoke', fontSize: '60px', fontWeight: '700', textAlign: 'center' }}>{prop.title}</h2>
+                <p style={{ color: 'white', textAlign: 'center'}}>{prop.subtitle}</p>
+              </div>
+          </div>
+          {/* <div style={{ width: '70%', backgroundColor: 'lightgrey', height: '350px'}}>Imagem Fundo</div> */}
+        </div>
+        {/* <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', marginTop: '25px' }}>
           <div style={{ maxHeight: '300px', width: '100%', minHeight: '500px'}} className="mainContent">
             <img alt="Fundo" style={{ zIndex: '1', width: '100%', height: '550px'}} src={ prop.img }/>
             <div className="background">
@@ -45,7 +46,37 @@ const LayoutPage = (prop) => {
               </div>
             </div>
           </div>
+        </div> */}
+        <div style={{ display: 'flex', width: '100%', marginTop: '50px', justifyContent: 'center'}}>
+          <div style={{ display: 'flex', width: '70%', height: '100%', marginBottom: '25px'}}>
+            <div style={{ display: 'flex', flexDirection: 'column', width: '50%'}}>
+              <div style={{ display: 'flex', justifyContent: 'center', marginTop: '25px', marginBottom: '25px' }}>
+                <div>
+                  <div style={{ fontSize: '12px', fontWeight: 'bold', color: '#FF8120'}}>TRANSPORTE E SEGURANÇA</div>
+                  <h3 style={{ color:'#245E70', fontWeight: 'bold'}}>{ prop.textTitle }</h3>
+                  <div>{ prop.text }</div>
+                </div>
+              </div>
+              <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+                <div style={{ backgroundColor: '#FF8120', width: '40%', height: '215px', maxWidth: '300px', display: 'flex', flexDirection: 'column', color: 'whitesmoke', justifyContent: 'center', alignItems: 'center'}}>
+                  <FaFlag style={{ width: '50px', height: '50px' }}/>
+                  <div>Alta qualidade.</div>
+                </div>
+                <div style={{ backgroundColor: '#FF8120', width: '40%', height: '255px', maxWidth: '300px', display: 'flex', flexDirection: 'column', color: 'whitesmoke', justifyContent: 'center', alignItems: 'center', boxShadow: '0 0 1em #1a1a1aa8' }}>
+                  <FaLock style={{ width: '50px', height: '50px' }}/>
+                  <div>Sua mudança com segurança.</div>
+                </div>
+                <div style={{ backgroundColor: '#FF8120', width: '40%', height: '215px', maxWidth: '300px', display: 'flex', flexDirection: 'column', color: 'whitesmoke', justifyContent: 'center', alignItems: 'center' }}>
+                  <FaAngleDoubleRight style={{ width: '50px', height: '50px' }}/>
+                  <div>Mudança com agilidade.</div>
+                </div>
+              </div>
+            </div>
+            <div style={{ backgroundColor: 'lightgray', width: '50%', marginLeft: '2%' }}><img alt="Fundo" style={{ width: '100%', height: '100%'}} src={ prop.contentImage }/></div>
+          </div>
         </div>
+
+
           {/* <main>{children}</main> */}
         <main style={{ marginTop: '70px' }}>{prop.children}</main>
         {/* Rodape do Site */}

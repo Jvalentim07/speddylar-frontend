@@ -1,14 +1,12 @@
 import * as React from "react"
 import LayoutPage from "../../components/layoutPage"
-import Form from 'react-bootstrap/Form'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
 import ResidencialImage from '../../images/residencialImage.jpg'
 import ComercialImage from '../../images/comercialImage.jpg'
 import GuardaMoveislImage from '../../images/guardamoveisImage.jpg'
 import IcamentoImage from '../../images/icamentoImage.jpg'
 import MovingImage from '../../images/movingImage.jpg'
 import BackgroundPacking from '../../images/backgroundPacking.jpg'
+import PackingImage from '../../images/embalagemImage.jpg'
 import { Link } from "gatsby"
 
 import services from '../../api/services'
@@ -31,6 +29,9 @@ class Packaging extends React.Component {
             title={this.state.title}
             img={ BackgroundPacking }
             pagination={ 'Home > Serviços > Embalagem' }
+            textTitle="Variedade de tipo de embalagem"
+            text="Nossas embalagens vão de acordo com as necessidades de nossos clientes, garantindo proteção e segurança para transportar. Papelão Ondulado, Plástico Bolha, Papel Resma, Papel Kraft, Cabideiros, Cobertores, Caixas Colméia."
+            contentImage={ PackingImage }
             >
                 <div style={{ display: 'flex', alignItems: "center", flexDirection: "column" }}>
                     <div>
@@ -45,33 +46,6 @@ class Packaging extends React.Component {
                             Cobertores
                             Caixas Colméia
                         </div>
-                    </div>
-                    <div className="contentForm">
-                        <Form style={{ maxWidth: "550px",  borderRadius: '25px'}} method="POST">
-                            <h2>FALE CONOSCO</h2>
-                            <Row className="g-2">
-                                <Col md>
-                                    <Form.Label>Nome</Form.Label>
-                                    <Form.Control id="name" type="text" placeholder="Insira seu nome" />
-                                </Col>
-                                <Col md>
-                                    <Form.Label>Email</Form.Label>
-                                    <Form.Control id="email" type="email" placeholder="Insira seu email" />
-                                </Col>
-                                <Form.Label>Telefone</Form.Label>
-                                <Form.Control id="phone" type="text" placeholder="Insira seu Telefone" />
-                                <Form.Control
-                                    id="description"
-                                    as="textarea"
-                                    name="Descricao"
-                                    placeholder="Leave a comment here"
-                                    style={{ height: '100px' }}
-                                />
-                            </Row>
-                            <div className="buttonStyle" style={{ backgroundColor: '#212529', color: 'whitesmoke', marginTop: '15px' }} role = "button" tabIndex={0}>
-                                Submit
-                            </div>
-                        </Form>
                     </div>
                 </div>
                 <div style={{ display: "flex", flexDirection: "column", alignItems: 'center'}}>

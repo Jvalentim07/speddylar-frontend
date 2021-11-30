@@ -4,7 +4,8 @@ import Form from 'react-bootstrap/Form'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Button from 'react-bootstrap/Button'
-import BudgetImage from '../images/budget.jpg'
+import BudgetBackground from '../images/budget.jpg'
+import BudgetImage from '../images/budgetImage.png'
 // import { sendMail } from '../mail/mail'
 // import { sendMail } from 'sendmail'
 
@@ -12,8 +13,11 @@ const Budget = () => {
     return (
         <LayoutPage 
             title="Orçamento"
-            img={ BudgetImage }
+            img={ BudgetBackground }
             pagination={ 'Home > Orçamento' }
+            textTitle="Sobre nossa empresa"
+            text="A Speedy Lar Mudança e Transporte Ltda atua na área de transporte de mudanças e guarda móveis sempre adequando às tendências do mercado, oferecendo a você segurança, conforto e qualidade, exigindo dos profissionais, responsabilidade cuidado e compromisso em suas operações. Mais que isso transportamos bens conquistado e para isso promovemos organização e proteção dos mesmo"
+            contentImage={ BudgetImage }
         >
             <div style={{ display: "flex", justifyContent: 'center', marginBottom: '50px' }}>
                 <Form style={{ width: "75%" }} action="https://getform.io/f/144743a8-b8c9-426a-8023-aa77e76b97d9" method="POST" name="budget">

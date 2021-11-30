@@ -1,13 +1,11 @@
 import * as React from "react"
 import LayoutPage from "../../components/layoutPage"
-import Form from 'react-bootstrap/Form'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
 import ResidencialImage from '../../images/residencialImage.jpg'
 import GuardaMoveislImage from '../../images/guardamoveisImage.jpg'
 import IcamentoImage from '../../images/icamentoImage.jpg'
 import PackingImage from '../../images/embalagemImage.jpg'
 import MovingImage from '../../images/movingImage.jpg'
+import ComercialImage from '../../images/comercialImage.jpg'
 import BackgroundComercial from '../../images/backgroundComercial.jpg'
 import { Link } from "gatsby"
 
@@ -31,40 +29,10 @@ class Comercial extends React.Component {
             title={this.state.title}
             img={ BackgroundComercial }
             pagination={ 'Home > Serviços > Mudança Comercial' }
+            textTitle="Mudança comercial sem dor de cabeça"
+            text="A Speedy Lar Mudança e Transporte Ltda oferece a melhor assistência, com segurança habilidade e todo tipo de suporte de acordo com a necessidade de cada empresa."
+            contentImage={ ComercialImage}
             >
-                <div style={{ display: 'flex', alignItems: "center", flexDirection: "column" }}>
-                    <div>
-                        <h2 style={{marginBottom: "36px", textAlign:"center" }}>SERVIÇOS DE MUDANÇAS E TRANSPORTES</h2>
-                        <div style={{ maxWidth: "710px", marginBottom: "15px", textAlign: "center" }}>A Speedy Lar Mudança e Transporte Ltda oferece a melhor assistência, com segurança habilidade e todo tipo de suporte de acordo com a necessidade de cada empresa.</div>
-                    </div>
-                    <div className="contentForm">
-                        <Form style={{ maxWidth: "550px",  borderRadius: '25px'}} method="POST">
-                            <h2>FALE CONOSCO</h2>
-                            <Row className="g-2">
-                                <Col md>
-                                    <Form.Label>Nome</Form.Label>
-                                    <Form.Control id="name" type="text" placeholder="Insira seu nome" />
-                                </Col>
-                                <Col md>
-                                    <Form.Label>Email</Form.Label>
-                                    <Form.Control id="email" type="email" placeholder="Insira seu email" />
-                                </Col>
-                                <Form.Label>Telefone</Form.Label>
-                                <Form.Control id="phone" type="text" placeholder="Insira seu Telefone" />
-                                <Form.Control
-                                    id="description"
-                                    as="textarea"
-                                    name="Descricao"
-                                    placeholder="Leave a comment here"
-                                    style={{ height: '100px' }}
-                                />
-                            </Row>
-                            <div className="buttonStyle" style={{ backgroundColor: '#212529', color: 'whitesmoke', marginTop: '15px' }} role = "button" tabIndex={0}>
-                                Submit
-                            </div>
-                        </Form>
-                    </div>
-                </div>
                 <div style={{ display: "flex", flexDirection: "column", alignItems: 'center'}}>
                     <div style={{ display: "flex", flexWrap: 'wrap', justifyContent: 'center'}}>
                         <div className="container">

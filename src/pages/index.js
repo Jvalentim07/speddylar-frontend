@@ -180,7 +180,7 @@ class HomePage extends React.Component {
                <div>comercial@speedylarmudancas.com.br</div>
              </div>
            </div>
-           <div className="headerContent">
+           {/* <div className="headerContent">
              <div className="logo"><img width="300px" src={this.state.logo} alt='logoImg' /></div>
              <div style={{ display: 'flex', alignItems: 'center' }}>
                <FaWhatsapp style={{ width: '35px', height: '35px', color: '#FF8120', lineHeight: '48px', marginRight: '15px' }}></FaWhatsapp>
@@ -189,10 +189,10 @@ class HomePage extends React.Component {
                  <Link href="https://api.whatsapp.com/send?phone=551139897408&text=Ol%C3%A1,%20quero%20saber%20mais%20sobre%20os%20servi%C3%A7os%20da%20Speedy%20Lar%20Mudan%C3%A7as" passHref={true} style={{ color: '#245E70', textDecoration: 'none'}}>{ this.state.contact }</Link>
                </div>
              </div>
-           </div>
-           <NavigationBar/>
+           </div> */}
+           <NavigationBar style={{ zIndex: '2'}}/>
            {/* Conteudo Principal da Pagina */}
-           <div className="content-1">
+           <div className="content-1" style={{ zIndex: '1'}}>
              <div style={{ width: '100%', height: '100%', zIndex: '1'}}>
                <div style={{ position: "absolute", width: "100%", height: "650px", backgroundColor: '#ffffff8f' }}></div>
                <img width="100%" height="650px" src={ BackgroundTruck } alt='ImagemFundo'></img>

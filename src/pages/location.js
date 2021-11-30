@@ -1,6 +1,7 @@
 import * as React from "react"
 import LayoutPage from "../components/layoutPage"
-import LocationImage from '../images/budget.jpg'
+import LocationBackground from '../images/budget.jpg'
+import LocationImage from '../images/transparent.png'
 
 import '../components/pages.scss'
 
@@ -9,8 +10,11 @@ const Location = () => {
     <LayoutPage 
         title="Localização" 
         subtitle="PROFISSIONAIS QUALIFICADOS, SEGURANÇA NO TRANSPORTE E ZELO EM SUA MUDANÇA."
-        img={ LocationImage }
+        img={ LocationBackground }
         pagination={ 'Home > Localização' }
+        textTitle="Sobre nossa empresa"
+        text="A Speedy Lar Mudança e Transporte Ltda atua na área de transporte de mudanças e guarda móveis sempre adequando às tendências do mercado, oferecendo a você segurança, conforto e qualidade, exigindo dos profissionais, responsabilidade cuidado e compromisso em suas operações. Mais que isso transportamos bens conquistado e para isso promovemos organização e proteção dos mesmo"
+        contentImage={ LocationImage}
     >
         <div style={{ display: 'flex', alignItems: 'center',  flexDirection: 'column', marginBottom: '50px', padding: '20px' }}>
             <div style={{marginBottom: "20px"}}>
