@@ -70,7 +70,7 @@ class NavigationBar extends React.Component {
                     <NavDropdown title="Serviços" id="basic-nav-dropdown">
                         {
                             this.state.itemsServices.map( item => (
-                                <NavDropdown.Item key={item.id} style={{color: 'black'}} href={`http://localhost:8000${item.content}`}>{item.name}</NavDropdown.Item>
+                                <NavDropdown.Item key={item.id} style={{color: 'black'}} href={`https://speddylar.tandainterativa.com.br${item.content}`}>{item.name}</NavDropdown.Item>
                             ))
                         }
                         <NavDropdown.Divider />
