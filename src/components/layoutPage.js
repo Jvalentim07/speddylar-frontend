@@ -19,14 +19,14 @@ const LayoutPage = (prop) => {
     <div className="content">
       <div style={{ width: '100%', backgroundColor: '#FF8120' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', padding: '15px', color: 'whitesmoke' }}>
-          <Link to="https://www.facebook.com/speedylarmudancas/"><FaFacebookSquare style={{ color: 'whitesmoke', height: '24px' }}></FaFacebookSquare></Link>
+          <Link href="https://www.facebook.com/speedylarmudancas/"><FaFacebookSquare style={{ color: 'whitesmoke', height: '24px' }}></FaFacebookSquare></Link>
           <div>comercial@speedylarmudancas.com.br</div>
         </div>
       </div>
       <NavBar />
       <div style={{ width: "100%", height: "100%" }}>
-        <div style={{ display: 'flex', justifyContent: 'center'}}>
-          <img alt="Fundo" style={{ zIndex: '1', width: '70%', height: '350px'}} src={ prop.img }/>
+        <div className="imgContent">
+          <img className="imgLayout" alt="Fundo" src={ prop.img }/>
           <div className="background">
               <div style={{ display: 'flex', height: '100%', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
                 <div style={{ fontSize: '17px', fontWeight: 'bold', color: '#FF8120'}}>SERVIÇOS DE MUDANÇAS E TRANSPORTES</div>
@@ -48,8 +48,8 @@ const LayoutPage = (prop) => {
           </div>
         </div> */}
         <div style={{ display: 'flex', width: '100%', marginTop: '50px', justifyContent: 'center'}}>
-          <div style={{ display: 'flex', width: '70%', height: '100%', marginBottom: '25px'}}>
-            <div style={{ display: 'flex', flexDirection: 'column', width: '50%'}}>
+          <div className="contentLayout">
+            <div className='textContent'>
               <div style={{ display: 'flex', justifyContent: 'center', marginTop: '25px', marginBottom: '25px' }}>
                 <div>
                   <div style={{ fontSize: '12px', fontWeight: 'bold', color: '#FF8120'}}>TRANSPORTE E SEGURANÇA</div>
@@ -58,21 +58,21 @@ const LayoutPage = (prop) => {
                 </div>
               </div>
               <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-                <div style={{ backgroundColor: '#FF8120', width: '40%', height: '215px', maxWidth: '300px', display: 'flex', flexDirection: 'column', color: 'whitesmoke', justifyContent: 'center', alignItems: 'center'}}>
+                <div style={{ padding: '20px', backgroundColor: '#FF8120', width: '40%', height: '215px', maxWidth: '300px', display: 'flex', flexDirection: 'column', color: 'whitesmoke', justifyContent: 'center', alignItems: 'center'}}>
                   <FaFlag style={{ width: '50px', height: '50px' }}/>
-                  <div>Alta qualidade.</div>
+                  <div style={{ textAlign: 'center'}}>Alta qualidade.</div>
                 </div>
-                <div style={{ backgroundColor: '#FF8120', width: '40%', height: '255px', maxWidth: '300px', display: 'flex', flexDirection: 'column', color: 'whitesmoke', justifyContent: 'center', alignItems: 'center', boxShadow: '0 0 1em #1a1a1aa8' }}>
+                <div style={{ padding: '20px', backgroundColor: '#FF8120', width: '40%', height: '255px', maxWidth: '300px', display: 'flex', flexDirection: 'column', color: 'whitesmoke', justifyContent: 'center', alignItems: 'center', boxShadow: '0 0 1em #1a1a1aa8' }}>
                   <FaLock style={{ width: '50px', height: '50px' }}/>
-                  <div>Sua mudança com segurança.</div>
+                  <div style={{ textAlign: 'center'}}>Sua mudança com segurança.</div>
                 </div>
-                <div style={{ backgroundColor: '#FF8120', width: '40%', height: '215px', maxWidth: '300px', display: 'flex', flexDirection: 'column', color: 'whitesmoke', justifyContent: 'center', alignItems: 'center' }}>
+                <div style={{ padding: '20px', backgroundColor: '#FF8120', width: '40%', height: '215px', maxWidth: '300px', display: 'flex', flexDirection: 'column', color: 'whitesmoke', justifyContent: 'center', alignItems: 'center' }}>
                   <FaAngleDoubleRight style={{ width: '50px', height: '50px' }}/>
-                  <div>Mudança com agilidade.</div>
+                  <div style={{ textAlign: 'center'}}>Mudança com agilidade.</div>
                 </div>
               </div>
             </div>
-            <div style={{ backgroundColor: 'lightgray', width: '50%', marginLeft: '2%' }}><img alt="Fundo" style={{ width: '100%', height: '100%'}} src={ prop.contentImage }/></div>
+            <div className="imageContent"><img alt="Fundo" style={{ width: '100%', height: '100%'}} src={ prop.contentImage }/></div>
           </div>
         </div>
 
@@ -104,9 +104,9 @@ const LayoutPage = (prop) => {
               </div>
             </div>
             <div className="footerTitle">
-              Redes Socias
-              <div><FaInstagram  style={{ marginRight: '10px'}}></FaInstagram>@speedylarmudancas</div>
-              <div><FaFacebookSquare style={{ marginRight: '10px'}}></FaFacebookSquare>Speedy Lar Mudanças</div>
+                Redes Socias
+                <div><FaInstagram  style={{ marginRight: '10px'}}></FaInstagram><Link href="https://www.instagram.com/speedylarmudancas/" style={{ textDecoration: 'none', color: 'whitesmoke'}}>@speedylarmudancas</Link></div>
+                <div><FaFacebookSquare style={{ marginRight: '10px'}}></FaFacebookSquare><Link href="https://web.facebook.com/speedylarmudancas/?_rdc=1&_rdr" style={{ textDecoration: 'none', color: 'whitesmoke'}}>speedylarmudancas</Link></div>
             </div>
           </div>
         </div>

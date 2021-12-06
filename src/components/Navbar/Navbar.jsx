@@ -27,7 +27,7 @@ class NavigationBar extends React.Component {
     // Componente do NavBar
     render () {
         return (
-            <div style={{ width: '100%', minWidth: '950px', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+            <div style={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                 <div className="info-contact">
                    <div className="info-group">
                         <FaPhoneAlt style={{ marginRight: '15px'}}/>
@@ -70,11 +70,11 @@ class NavigationBar extends React.Component {
                     <NavDropdown title="Serviços" id="basic-nav-dropdown">
                         {
                             this.state.itemsServices.map( item => (
-                                <NavDropdown.Item key={item.id} style={{color: 'black'}} href={`https://speddylar.tandainterativa.com.br/${item.content}`}>{item.name}</NavDropdown.Item>
+                                <NavDropdown.Item key={item.id} style={{color: 'black'}} href={`http://localhost:8000${item.content}`}>{item.name}</NavDropdown.Item>
                             ))
                         }
                         <NavDropdown.Divider />
-                        <NavDropdown.Item style={{color: 'black'}} href="/services">Ver Todos Serviços</NavDropdown.Item>
+                        <NavDropdown.Item style={{color: 'black'}} href="/servicos">Ver Todos Serviços</NavDropdown.Item>
                     </NavDropdown>
                 </div>
             </div>

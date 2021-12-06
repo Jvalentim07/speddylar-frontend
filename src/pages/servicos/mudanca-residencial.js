@@ -1,61 +1,65 @@
 import * as React from "react"
 
 import LayoutPage from "../../components/layoutPage"
-import ResidencialImage from '../../images/residencialImage.jpg'
+import BackgroundResidencial from '../../images/backgroundResidencial.jpg'
 import ComercialImage from '../../images/comercialImage.jpg'
+import GuardaMoveislImage from '../../images/guardamoveisImage.jpg'
 import IcamentoImage from '../../images/icamentoImage.jpg'
 import PackingImage from '../../images/embalagemImage.jpg'
 import MovingImage from '../../images/movingImage.jpg'
-import GuardaMoveislImage from '../../images/guardamoveisImage.jpg'
+import ResidencialImage from '../../images/residencialImage.jpg'
 import { Link } from "gatsby"
-import BackgroundKeep from '../../images/backgroundKeep.jpg'
 
 import services from '../../api/services'
 
-class Moveis extends React.Component {
+import '../index.scss'
+
+class Residencial extends React.Component {
     state = {
         servicesInfo: [],
-        title: ''
+        title: '',
+        description: ''
     }
     async componentDidMount() {
         const data = await services.getServices()
         await this.setState({ 
             servicesInfo: data[0],
-            title: data[0].Seo[2].MetaTitle
+            title: data[0].Seo[0].MetaTitle,
+            description: data[0].Seo[0].Metas[0].content
         })
+        console.log(this.state)
     }
     render () {
         return (
             <LayoutPage
             title={this.state.title}
-            img={ BackgroundKeep }
-            pagination={ 'Home > Serviços > Guarda Móveis' }
-            textTitle="Guarde suas coisa com segurança"
-            text="A Speedy Lar Mudança e Transporte Ltda tem como meta principal a satisfação de seus clientes proporcionando total garantia da qualidade de seus serviços, oferecendo sofisticados e modernos materiais para embalagens, profissionais qualificados, segurança durante transporte, zelo, responsabilidade e cuidados especiais para com seu patrimônio, resultando em total comodidade já a partir de nossa contratação."
-            contentImage={ GuardaMoveislImage }
+            img={ BackgroundResidencial }
+            pagination={ 'Home > Serviços > Mudança Residencial' }
+            textTitle="Mudança residencial sem dor de cabeça"
+            text="A Speedy Lar Mudança e Transporte Ltda procura satisfazer seus clientes proporcionando excelência para suas mudanças residenciais, oferecendo sofisticados e modernos materiais de embalagens, profissionais qualificados, segurança durante transporte, habilidade na desmontagem e montagem dos itens, comodidade e principalmente responsabilidade para melhor atende-lo."
+            contentImage={ ResidencialImage }
             >
                 <div style={{ display: "flex", flexDirection: "column", alignItems: 'center'}}>
                     <div style={{ display: "flex", flexWrap: 'wrap', justifyContent: 'center'}}>
                         <div className="container">
-                            <img alt="Residencial" className="imagePage" src={ ResidencialImage }/>
-                            <div class="overlay">
-                                <h3 style={{ color: '#fff', fontSize: '24px', fontWeight: '700' }}>MUDANÇA</h3>
-                                <h3 style={{ color: '#fff', fontSize: '24px', fontWeight: '700' }}>RESIDENCIAL</h3>
-                                <p style={{ color: "#fff"}}>A Speedy Lar Mudanças oferece materiais de embalagens, profissionais treinados e segurança para sua mudança</p>
-                                <div className="buttonStyle"><Link to="/services/residencial">Saiba Mais</Link></div>
-                            </div>
-                        </div>
-                        <div className="container">
                             <img alt="Comercial" className="imagePage" src={ ComercialImage }/>
-                            <div class="overlay">
+                            <div className="overlay">
                                 <h3 style={{ color: '#fff', fontSize: '24px', fontWeight: '700' }}>MUDANÇA COMERCIAL</h3>
                                 <p style={{ color: "#fff"}}>Oferecemos assistência com segurança e suporte de acordo com a necessidade de cada empresa para sua Mudança</p>
                                 <div className="buttonStyle"><Link to="/services/comercial">Solicite</Link></div>
                             </div>
                         </div>
                         <div className="container">
+                            <img alt="GuardaImagem" className="imagePage" src={ GuardaMoveislImage }/>
+                            <div className="overlay">
+                                <h3 style={{ color: '#fff', fontSize: '24px', fontWeight: '700' }}>GUARDA MÓVEL</h3>
+                                <p style={{ color: "#fff"}}>Dispomos de guarda-móveis com box de vários tamanhos e amplos espaços para armazenagem para diversos objetos</p>
+                                <div className="buttonStyle"><Link to="/services/guardamoveis">Entre em contato</Link></div>
+                            </div>
+                        </div>
+                        <div className="container">
                             <img alt="Icamento" className="imagePage" src={ IcamentoImage }/>
-                            <div class="overlay">
+                            <div className="overlay">
                                 <h3 style={{ color: '#fff', fontSize: '24px', fontWeight: '700' }}>IÇAMENTO</h3>
                                 <p style={{ color: "#fff"}}>A Speedy Lar Mudanças dispõe de profissionais treinados para as operações no Serviço de Içamento de Móveis e Objetos</p>
                                 <div className="buttonStyle"><Link to="/services/icamento">Saiba mais</Link></div>
@@ -65,15 +69,15 @@ class Moveis extends React.Component {
                     <div style={{ display: "flex", flexWrap: 'wrap', justifyContent: 'center' }}>
                         <div className="container">
                             <img alt="Embalagem" className="imagePage" src={ PackingImage }/>
-                            <div class="overlay">
+                            <div className="overlay">
                                 <h3 style={{ color: '#fff', fontSize: '24px', fontWeight: '700' }}>EMBALAGEM</h3>
                                 <p style={{ color: "#fff"}}>Nossas embalagens vão de acordo com as necessidades de nossos clientes, garantindo proteção e segurança</p>
                                 <div className="buttonStyle"><Link to="/services/icamento">Solicite</Link></div>
                             </div>
                         </div>
                         <div className="container">
-                            <img alt="Mudança" className="imagePage" src={ MovingImage }/>
-                            <div class="overlay">
+                            <img alt="Mudanca" className="imagePage" src={ MovingImage }/>
+                            <div className="overlay">
                                 <h3 style={{ color: '#fff', fontSize: '24px', fontWeight: '700' }}>MONTAGEM E DESMONTAGEM</h3>
                                 <p style={{ color: "#fff"}}>Serviço Montagem e Desmontagem de Móveis para Mudanças ou Guarda-Móvel com equipe treinada</p>
                                 <div className="buttonStyle"><Link to="/services/icamento">Entre em contato</Link></div>
@@ -86,4 +90,4 @@ class Moveis extends React.Component {
     }
 }
 
-export default Moveis
+export default Residencial

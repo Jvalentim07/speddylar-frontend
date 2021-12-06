@@ -8,6 +8,7 @@ import GuardaMoveislImage from '../images/guardamoveisImage.jpg'
 import IcamentoImage from '../images/icamentoImage.jpg'
 import PackingImage from '../images/embalagemImage.jpg'
 import MovingImage from '../images/movingImage.jpg'
+import ServiceImage from '../images/box.jpg'
 import { Link } from "gatsby"
 import './imageHover.scss'
 
@@ -17,6 +18,9 @@ const Services = () => {
         title="SERVIÇOS" 
         img={ Background }
         pagination={ 'Home > Serviços' }
+        textTitle="Sobre serviços"
+            text="A Speedy Lar Mudança e Transporte Ltda atua na área de transporte de mudanças e guarda móveis sempre adequando às tendências do mercado, oferecendo a você segurança, conforto e qualidade, exigindo dos profissionais, responsabilidade cuidado e compromisso em suas operações. Mais que isso transportamos bens conquistado e para isso promovemos organização e proteção dos mesmo"
+        contentImage={ ServiceImage }
     >
         {/* <div>
             <div>
